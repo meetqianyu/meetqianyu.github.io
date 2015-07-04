@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>HTML5示网页标题</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/jquery-1.11.1.js"></script>
+	<script src="js/bootstrap.js"></script>	
+  <script type="text/javascript">
+
+    function vidplay() {
+       var video = document.getElementById("Video1");
+       var button = document.getElementById("play");
+       if (video.paused) {
+          video.play();
+          button.textContent = "||";
+       } else {
+          video.pause();
+          button.textContent = ">";
+       }
+    }
+
+    function restart() {
+        var video = document.getElementById("Video1");
+        video.currentTime = 0;
+    }
+
+    function skip(value) {
+        var video = document.getElementById("Video1");
+        video.currentTime += value;
+    }      
+</script>
+  <style>
+  #Video1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    
+  }
+    #buttonbar{
+      opacity: .6;
+      position: absolute;
+     bottom: -10%;
+      right: 50%;
+      left: 40%;
+      height: 10%;
+      
+    }
+  .media-body{
+    position: absolute;
+    width: 60%;
+    color: white;
+    opacity: 0.7;
+    height:auto;
+    right: 40%;
+    left: 60%
+    
+  }
+    
+    body{
+  background-color: black;
+  }
+  
+  </style>
+  
+  
+  
+</head>
+
+<body>
+  
+   <!--  /*****************************导航******************************/-->
+
+			<ul class="breadcrumb">
+				<li   >
+					<a href="home.html" id="home">Home</a> <span class="divider">/</span>
+				</li>
+				
+				<li class="active">
+					myAnimation
+				</li>
+			</ul>
+  <div >
+<video id="Video1" src="img/myAnimation.mov" controls autoplay loop muted preload="auto" poster="demo.jpg" >
+</video>
+    <div id="buttonbar">
+    <button id="restart" onclick="restart();">[]</button> 
+    <button id="rew" onclick="skip(-10)">&lt;&lt;</button>
+    <button id="play" onclick="vidplay()">&gt;</button>
+    <button id="fastFwd" onclick="skip(10)">&gt;&gt;</button>
+</div>         
+    
+    <div class="media-body">
+					<h1 class="media-heading">
+						《Attention to paper》
+					</h1> 
+    </div>
+  </div>
+            
+				
+</body>
+</html>
