@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>HTML5示网页标题</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+  
+<script>
+  function yinCang(minPhoto){
+    if(minPhoto==1){
+      document.getElementById("minPhoto1").style.height=0;
+  document.getElementById("minPhoto1").style.transition="0.1s"
+    }
+  else if(minPhoto==2){
+    document.getElementById("minPhoto2").style.height=0;
+  document.getElementById("minPhoto2").style.transition="0.1s"
+    
+  }else{
+    document.getElementById("minPhoto3").style.height=0;
+  document.getElementById("minPhoto3").style.transition="0.1s"
+  }
+  }
+  
+  
+  function chuXian(minPhoto){
+    
+     if(minPhoto==1){
+     document.getElementById("minPhoto1").style.height="120px";
+  document.getElementById("minPhoto1").style.transition="0.1s"
+    }
+  else if(minPhoto==2){
+    document.getElementById("minPhoto2").style.height="120px";
+  document.getElementById("minPhoto2").style.transition="0.1s"
+    
+  }else{
+    document.getElementById("minPhoto3").style.height="120px";
+  document.getElementById("minPhoto3").style.transition="0.1s"
+  }
+  }
+  
+  function changPhoto(changePhoto){
+  if(changePhoto==1){
+    document.getElementById("p1").className="item active";
+    document.getElementById("p3").className="item";
+    document.getElementById("p2").className="item";
+    }
+  else if(changePhoto==2){
+   document.getElementById("p2").className="item active";
+    document.getElementById("p3").className="item";
+    document.getElementById("p1").className="item";
+    
+  }else{
+   document.getElementById("p3").className="item active";
+    document.getElementById("p2").className="item";
+    document.getElementById("p1").className="item";
+  }
+
+    
+    
+    
+    
+  }
+  </script>
+  
+
+  
+  <style>
+  .minPhoto{
+    float: left;
+    margin-right: 5px;
+    margin-top: 10px;
+/*    background-color: rgba(255,0,0,0.5)*/
+    
+  }
+    
+    #minPhoto1{
+      position:absolute;
+      height: 120px;
+      width: 120px;
+      background-color: gray;
+      opacity: 0.8;
+       margin-right: 5px;
+       margin-top: 10px;
+      overflow: hidden;
+    }
+    
+    
+    
+    #minPhoto2{
+      position:absolute;
+      height: 120px;
+      width: 80px;
+      background-color: gray;
+      opacity: 0.8;
+       margin-right: 5px;
+       margin-top: 10px;
+      margin-left: 125px;
+      overflow: hidden;
+      
+    }
+    #minPhoto3{
+      position:absolute;
+      height: 120px;
+      width: 181px;
+      background-color: gray;
+      opacity: 0.8;
+       margin-right: 5px;
+       margin-top: 10px;
+      margin-left: 210px;
+      overflow: hidden;
+    }
+    
+  </style>
+  
+  
+</head>
+
+  
+  
+<body>
+  
+  <!--  /*****************************导航******************************/-->
+
+			<ul class="breadcrumb">
+				<li   >
+					<a href="home.html" id="home">Home</a> <span class="divider">/</span>
+				</li>
+				
+				<li class="active">
+					myPhoto
+				</li>
+			</ul>
+		
+   <!--  /****************************图******************************/-->
+  <div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="carousel slide" id="carousel-860451">
+				<ol class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#carousel-860451">
+					</li>
+					<li data-slide-to="1" data-target="#carousel-860451">
+					</li>
+					<li data-slide-to="2" data-target="#carousel-860451">
+					</li>
+				</ol>
+				<div class="carousel-inner">
+					<div id="p1" class="item active">
+						<img alt="" src="img/meet.jpg" />
+						<div class="carousel-caption">
+							<h4>
+								文三街
+							</h4>
+							<p>
+								There many stories every day.
+							</p>
+						</div>
+					</div>
+					<div id="p2" class="item">
+						<img alt="" src="img/shou.jpg" />
+						<div class="carousel-caption">
+							<h4>
+								相握
+							</h4>
+							<p>
+								10/2013·西湖音乐节
+							</p>
+						</div>
+					</div>
+					<div id="p3" class="item">
+						<img alt="" src="img/kan.jpg" />
+						<div class="carousel-caption">
+							<h4>
+								看
+							</h4>
+							<p>
+								05/2014·西兴
+							</p>
+						</div>
+					</div>
+				</div> <a class="left carousel-control" href="#carousel-860451" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-860451" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+		</div>
+      <div class="row clearfix">
+      <div class="col-md-4 column"></div>
+        <div class="col-md-5 column">
+    <div id="minPhoto1"  onmouseover="yinCang(1)"  onmouseout="chuXian(1)" ></div> <div class="minPhoto" onclick="changPhoto(1)"> <img src="img/meet-min.jpg" ></div>
+        
+    <div id="minPhoto2" onmouseover="yinCang(2)"  onmouseout="chuXian(2)"></div>    <div class="minPhoto" onclick="changPhoto(2)"><img src="img/shou-min.jpg" ></div>
+        
+    <div id="minPhoto3" onmouseover="yinCang(3)"  onmouseout="chuXian(3)"></div>   
+          <div class="minPhoto"  onclick="changPhoto(3)"> <img src="img/kan-min.jpg" ></div>
+      </div>
+      <div class="col-md-3 column"></div></div>
+	</div>
+</div>
+  <script>
+    $('.carousel').carousel({interval:false});
+  var minPhoto=0; 
+    
+    var changePhoto=0;
+  </script>
+  
+</body>
+</html>
