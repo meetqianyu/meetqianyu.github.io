@@ -1,0 +1,83 @@
+* {
+  font-family: 'Arial','Helvetica';
+}
+html,body {
+  margin: 0;
+  padding: 0;
+}
+.nav-body {
+  width: 300px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  box-shadow: 1px 0px 11px 0px #eee;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-size: 13px;
+}
+.links {
+  text-align: left;
+  list-style-type: circle;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  padding-left: 80px;
+  line-height: 1.8em;
+}
+.links a {
+  text-decoration: none;
+  color: #999;
+}
+.links a:hover {
+  color: #333;
+}
+.container {
+  margin-left: 300px;
+  padding: 30px;
+  color: #666;
+}
+.avatar {
+  display: inline-block;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #eee;
+  overflow: hidden;
+  transition: all .5s;
+  box-sizing: border-box;
+  position: relative;
+}
+.avatar-head,
+.avatar-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.avatar-head {
+  z-index: 5;
+  transition: all .5s;
+}
+.avatar:hover .avatar-head {
+  transform: rotate(180deg);
+  transform-origin: 46%;
+}
+.avatar:hover {
+  box-shadow: 0 0 10px 1px #ddd;
+  border-color: #e1e1e1;
+  
+}
+.avatar img {
+  width: 100%;
+  height: auto;
+}
