@@ -14,6 +14,8 @@ html,body {
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
+  background-color: #fafafa;
+  border-right: 1px solid rgba(0,0,0,0.07);
 }
 
 .footer {
