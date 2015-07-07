@@ -23,6 +23,7 @@ html,body {
   left: 0;
   text-align: center;
   font-size: 13px;
+  color: #aaa;
 }
 .links {
   text-align: left;
@@ -38,7 +39,7 @@ html,body {
   color: #999;
 }
 .links a:hover {
-  color: #333;
+  color: #48b;
 }
 .container {
   margin-left: 300px;
