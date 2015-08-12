@@ -72,7 +72,7 @@ html,body {
   transition: all .5s;
 }
 .avatar:hover .avatar-head {
-  transform: rotate(1800deg);
+  transform: rotate(180deg);
   transform-origin: 46%;
 }
 .avatar:hover {
